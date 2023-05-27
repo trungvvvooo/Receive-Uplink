@@ -1,0 +1,83 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Thu Oct 13 08:55:17 2022
+| Host         : DESKTOP-FP4AO1S running 64-bit major release  (build 9200)
+| Command      : report_drc -file lte_drc_opted.rpt -pb lte_drc_opted.pb -rpx lte_drc_opted.rpx
+| Design       : lte
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 9
++---------+----------+-------------------------------------+------------+
+| Rule    | Severity | Description                         | Violations |
++---------+----------+-------------------------------------+------------+
+| ZPS7-1  | Warning  | PS7 block required                  | 1          |
+| REQP-28 | Advisory | enum_USE_MULT_NONE_connects_CEM_GND | 4          |
+| REQP-30 | Advisory | enum_MREG_0_connects_CEM_GND        | 4          |
++---------+----------+-------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+REQP-28#1 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+I/channel_filter/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#2 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+I/resampler_filter/U0/i_synth/g_decimation.i_decimation/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#3 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+Q/channel_filter/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#4 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+Q/resampler_filter/U0/i_synth/g_decimation.i_decimation/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#1 Advisory
+enum_MREG_0_connects_CEM_GND  
+I/channel_filter/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#2 Advisory
+enum_MREG_0_connects_CEM_GND  
+I/resampler_filter/U0/i_synth/g_decimation.i_decimation/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#3 Advisory
+enum_MREG_0_connects_CEM_GND  
+Q/channel_filter/U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#4 Advisory
+enum_MREG_0_connects_CEM_GND  
+Q/resampler_filter/U0/i_synth/g_decimation.i_decimation/g_semi_parallel_and_smac.g_paths[0].g_madd_array_and_accum.g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+

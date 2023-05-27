@@ -1,0 +1,502 @@
+
+*** Running vivado
+    with args -log lte.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lte.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source lte.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Project/project_lte_receiver/project_lte_receiver.srcs/utils_1/imports/synth_1/lte.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Project/project_lte_receiver/project_lte_receiver.srcs/utils_1/imports/synth_1/lte.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lte -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8516
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1451.832 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lte' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:3]
+INFO: [Synth 8-6157] synthesizing module 'source' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/source.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'source' (1#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/source.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dds_compiler_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/dds_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds_compiler_0' (2#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/dds_compiler_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (3#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fifo_generator_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_tready' of module 'fifo_generator_0' is unconnected for instance 'FIFO' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:35]
+WARNING: [Synth 8-7023] instance 'FIFO' of module 'fifo_generator_0' has 9 connections declared, but only 8 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:35]
+INFO: [Synth 8-6157] synthesizing module 'i_channel' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_0' (4#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_0' is unconnected for instance 'halfband0_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:14]
+WARNING: [Synth 8-7023] instance 'halfband0_filter' of module 'fir_compiler_0' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:14]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_1' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_1' (5#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_1' is unconnected for instance 'halfband1_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:26]
+WARNING: [Synth 8-7023] instance 'halfband1_filter' of module 'fir_compiler_1' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:26]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_2' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_2' (6#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_2_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_2' is unconnected for instance 'resampler_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:38]
+WARNING: [Synth 8-7023] instance 'resampler_filter' of module 'fir_compiler_2' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:38]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_3' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_3' (7#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/fir_compiler_3_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_3' is unconnected for instance 'channel_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:49]
+WARNING: [Synth 8-7023] instance 'channel_filter' of module 'fir_compiler_3' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'i_channel' (8#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'q_channel' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:3]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_0' is unconnected for instance 'halfband0_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:14]
+WARNING: [Synth 8-7023] instance 'halfband0_filter' of module 'fir_compiler_0' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:14]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_1' is unconnected for instance 'halfband1_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:26]
+WARNING: [Synth 8-7023] instance 'halfband1_filter' of module 'fir_compiler_1' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:26]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_2' is unconnected for instance 'resampler_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:38]
+WARNING: [Synth 8-7023] instance 'resampler_filter' of module 'fir_compiler_2' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:38]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_3' is unconnected for instance 'channel_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:49]
+WARNING: [Synth 8-7023] instance 'channel_filter' of module 'fir_compiler_3' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'q_channel' (9#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:3]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:64]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (10#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-6016-DESKTOP-FP4AO1S/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SOURCE'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:21]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:64]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Q'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:55]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'I'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:46]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FIFO'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'lte' (11#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1451.832 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1451.832 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1451.832 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1451.832 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/dds_compiler_0/dds_compiler_0/dds_compiler_0_in_context.xdc] for cell 'DDS'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/dds_compiler_0/dds_compiler_0/dds_compiler_0_in_context.xdc] for cell 'DDS'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'FIFO'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'FIFO'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'I/halfband0_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'I/halfband0_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'Q/halfband0_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'Q/halfband0_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'I/halfband1_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'I/halfband1_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'Q/halfband1_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'Q/halfband1_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'I/resampler_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'I/resampler_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'Q/resampler_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'Q/resampler_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'I/channel_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'I/channel_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'Q/channel_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'Q/channel_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'your_instance_name'
+Parsing XDC File [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lte_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lte_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1488.863 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1488.863 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1488.863 ; gain = 37.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1488.863 ; gain = 37.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for DDS. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIFO. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/halfband0_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/halfband0_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/halfband1_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/halfband1_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/resampler_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/resampler_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/channel_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/channel_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for your_instance_name. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1488.863 ; gain = 37.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1488.863 ; gain = 37.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 3     
++---Registers : 
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1488.863 ; gain = 37.031
+---------------------------------------------------------------------------------
+
+*** Running vivado
+    with args -log lte.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lte.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source lte.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Project/project_lte_receiver/project_lte_receiver.srcs/utils_1/imports/synth_1/lte.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Project/project_lte_receiver/project_lte_receiver.srcs/utils_1/imports/synth_1/lte.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lte -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13228
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1444.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lte' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:3]
+INFO: [Synth 8-6157] synthesizing module 'source' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/source.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'source' (1#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/source.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dds_compiler_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/dds_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds_compiler_0' (2#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/dds_compiler_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (3#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fifo_generator_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_tready' of module 'fifo_generator_0' is unconnected for instance 'FIFO' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:37]
+WARNING: [Synth 8-7023] instance 'FIFO' of module 'fifo_generator_0' has 9 connections declared, but only 8 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:37]
+INFO: [Synth 8-6157] synthesizing module 'i_channel' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_0' (4#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_0' is unconnected for instance 'halfband0_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:14]
+WARNING: [Synth 8-7023] instance 'halfband0_filter' of module 'fir_compiler_0' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:14]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_1' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_1' (5#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_1' is unconnected for instance 'halfband1_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:26]
+WARNING: [Synth 8-7023] instance 'halfband1_filter' of module 'fir_compiler_1' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:26]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_2' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_2' (6#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_2_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_2' is unconnected for instance 'resampler_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:38]
+WARNING: [Synth 8-7023] instance 'resampler_filter' of module 'fir_compiler_2' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:38]
+INFO: [Synth 8-6157] synthesizing module 'fir_compiler_3' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_compiler_3' (7#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/fir_compiler_3_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_3' is unconnected for instance 'channel_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:49]
+WARNING: [Synth 8-7023] instance 'channel_filter' of module 'fir_compiler_3' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'i_channel' (8#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/i_channel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'q_channel' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:3]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_0' is unconnected for instance 'halfband0_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:14]
+WARNING: [Synth 8-7023] instance 'halfband0_filter' of module 'fir_compiler_0' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:14]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_1' is unconnected for instance 'halfband1_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:26]
+WARNING: [Synth 8-7023] instance 'halfband1_filter' of module 'fir_compiler_1' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:26]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_2' is unconnected for instance 'resampler_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:38]
+WARNING: [Synth 8-7023] instance 'resampler_filter' of module 'fir_compiler_2' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:38]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'fir_compiler_3' is unconnected for instance 'channel_filter' [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:49]
+WARNING: [Synth 8-7023] instance 'channel_filter' of module 'fir_compiler_3' has 7 connections declared, but only 6 given [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'q_channel' (9#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/q_channel.v:3]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:66]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (10#1) [E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/.Xil/Vivado-5040-DESKTOP-FP4AO1S/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SOURCE'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ILA'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:66]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Q'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'I'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:48]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FIFO'. This will prevent further optimization [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'lte' (11#1) [E:/Project/project_lte_receiver/project_lte_receiver.srcs/sources_1/new/lte.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1444.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1444.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1444.977 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1444.977 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/dds_compiler_0/dds_compiler_0/dds_compiler_0_in_context.xdc] for cell 'DDS'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/dds_compiler_0/dds_compiler_0/dds_compiler_0_in_context.xdc] for cell 'DDS'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'FIFO'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'FIFO'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'I/halfband0_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'I/halfband0_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'Q/halfband0_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_0/fir_compiler_0/fir_compiler_0_in_context.xdc] for cell 'Q/halfband0_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'I/halfband1_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'I/halfband1_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'Q/halfband1_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_1/fir_compiler_1/fir_compiler_1_in_context.xdc] for cell 'Q/halfband1_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'I/resampler_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'I/resampler_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'Q/resampler_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_2/fir_compiler_2/fir_compiler_2_in_context.xdc] for cell 'Q/resampler_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'I/channel_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'I/channel_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'Q/channel_filter'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/fir_compiler_3/fir_compiler_3/fir_compiler_3_in_context.xdc] for cell 'Q/channel_filter'
+Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ILA'
+Finished Parsing XDC File [e:/Project/project_lte_receiver/project_lte_receiver.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ILA'
+Parsing XDC File [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Project/project_lte_receiver/project_lte_receiver.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lte_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lte_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1473.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1473.379 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for DDS. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for FIFO. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/halfband0_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/halfband0_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/halfband1_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/halfband1_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/resampler_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/resampler_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I/channel_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Q/channel_filter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ILA. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 3     
++---Registers : 
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1473.379 ; gain = 28.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1473.828 ; gain = 28.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fir_compiler_0   |         2|
+|2     |fir_compiler_1   |         2|
+|3     |fir_compiler_2   |         2|
+|4     |fir_compiler_3   |         2|
+|5     |dds_compiler_0   |         1|
+|6     |fifo_generator_0 |         1|
+|7     |ila_0            |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |dds_compiler   |     1|
+|2     |fifo_generator |     1|
+|3     |fir_compiler   |     1|
+|4     |fir_compiler_0 |     1|
+|5     |fir_compiler   |     1|
+|6     |fir_compiler_1 |     1|
+|7     |fir_compiler   |     1|
+|8     |fir_compiler_2 |     1|
+|9     |fir_compiler   |     1|
+|10    |fir_compiler_3 |     1|
+|11    |ila            |     1|
+|12    |BUFG           |     1|
+|13    |LUT1           |     1|
+|14    |LUT2           |     5|
+|15    |LUT3           |     2|
+|16    |LUT4           |     1|
+|17    |FDRE           |     7|
+|18    |IBUF           |     2|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1480.602 ; gain = 7.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.602 ; gain = 35.625
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1492.664 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1501.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: c26e40f5
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1501.309 ; gain = 56.332
+INFO: [Common 17-1381] The checkpoint 'E:/Project/project_lte_receiver/project_lte_receiver.runs/synth_1/lte.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lte_utilization_synth.rpt -pb lte_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 13 08:53:52 2022...
