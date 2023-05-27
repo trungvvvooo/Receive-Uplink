@@ -1,0 +1,2 @@
+fir_compiler_3.vhd,vhdl,xil_defaultlib,../../../../project_lte_receiver.gen/sources_1/ip/fir_compiler_3/sim/fir_compiler_3.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v
